@@ -1,3 +1,5 @@
 import { exampleA, exampleB } from "./utils";
 
-console.log(`${exampleA} ${exampleB}`);
+const exampleC = process.env.EXAMPLE_C;
+
+console.log(`${exampleA} ${exampleB}${exampleC}`);
