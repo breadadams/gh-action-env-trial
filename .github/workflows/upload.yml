@@ -1,0 +1,22 @@
+name: Upload
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install
+      - run: npm run build
+        env:
+          EXAMPLE_A: hello
+          EXAMPLE_B: world
+      - uses: JasonEtco/upload-to-release@v0.1.1
+        with:
+          args: dist/main.js application/javascript
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
