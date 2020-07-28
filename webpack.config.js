@@ -3,5 +3,5 @@ const DotenvPlugin = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
-  plugins: [new DotenvPlugin()],
+  plugins: [new DotenvPlugin({ systemvars: true })],
 };
