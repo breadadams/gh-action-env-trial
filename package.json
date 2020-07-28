@@ -1,6 +1,6 @@
 {
   "name": "gh-action-env-trial",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "author": "Brad Adams <hi@breadadams.com> (http://breadadams.com)",
